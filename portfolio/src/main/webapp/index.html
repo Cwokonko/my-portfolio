@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
       <h1>Chidera Wokonko</h1>
+      <div class="topnav">
+            <div class="topnav-right">
+                <a href="index.html">About</a>
+                <a href="Proj.html">Projects</a>
+                <a href="Chidera_Wokonko_Resume.pdf">Resume</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
       <p>Welcome to my page!</p>
+      <img src = "images/Chidera-12.jpg" width=50% height=90%/>
       <p> My name is Chidera Wokonko and I'm currently an undergraduate student at Cornell University majoring in Electrical and Computer Engineering (ECE) with a minor in robotics. 
           Pursuing an engineering degree is no easy task, so to make that transition easier for subsequent classes I serve as a CUempower mentor for a group of freshman students 
           who are part of Diversity Programs in Engineering at Cornell University. When I'm not doing problem sets or studying for an exam I'm working out, watching movies, implementing
           my personal IOT devices or enjoying quality time with friends. I run a fitness vlog on Instagram called COFITNESS and I host weekly conversation hours at my university for 
           people who want to learn the Nigerian native tongue--Igbo. 
        </p>
-
+       <p>.......................................................................</p>
        <p> My favorite thing about being an ECE major is the opportunity I have to navigate the boundary between the 
            hardware and software realm. I'm really passionate about physical computing as it enables me to blur the 
            lines between the digital and physical world. Check out my projects to see how I've put passion to practice.
@@ -25,12 +33,18 @@
 				<li><a href="Proj.html" class="button">Projects</a></li>
 			</ul>
         </p>
-
+       <h3>Fast Facts</h3>
+            <ul>
+                <li>I speak three languages</li>
+                <li>My go-to deli order is bagel with cream cheese & jelly (Thank me later !)  </li>
+                <li>My Favorite book is Things Fall Apart by Chinua Achebe</li>
+            </ul>
+            
        <h3>Life Update</h3>
        <p>In Summer 2021, I will be interning for three months as a hardware development engineer intern 
            for Amazon's Lab 126 in Silicon Valley, CA. </p>
-           
-       <img src = "images/Chidera-12.jpg" width=50%/>
+    
+       
         <div id="connect">
             <p>Get in touch with me !</p>
             <ul>
@@ -41,12 +55,11 @@
                 <li class="icon solid fa-github ">Github</li>
             </ul>
         </div>
-         
+    </div>
          
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
-    </div>
   </body>
 </html>
