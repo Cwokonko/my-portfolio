@@ -23,10 +23,36 @@ function addRandomGreeting() {
   greetingContainer.innerText = quote;
 }
 
-async function showFacts(){
+async function showFact1(){
     const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.text();
+    const textFromResponse = await responseFromServer.json();
 
-    const dateContainer = document.getElementById('hello-container');
-    dateContainer.innerText = textFromResponse;
+    const helloContainer = document.getElementById('hello-container1');
+    helloContainer.innerHTML='';
+    helloContainer.appendChild(createListElement(textFromResponse.fact1));
+    //helloContainer.innerText = textFromResponse;
+}
+
+async function showFact2(){
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.json();
+
+    const helloContainer = document.getElementById('hello-container2');
+    helloContainer.innerHTML='';
+    helloContainer.appendChild(createListElement(textFromResponse.fact2));
+}
+
+async function showFact3(){
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.json();
+
+    const helloContainer = document.getElementById('hello-container3');
+    helloContainer.innerHTML='';
+    helloContainer.appendChild(createListElement(textFromResponse.fact3));
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('p');
+  liElement.innerText = text;
+  return liElement;
 }

@@ -35,11 +35,14 @@
         </p>
        <h3>Fast Facts</h3>
             <ul>
-                <li>I speak three languages</li>
-                <li>My go-to deli order is bagel with cream cheese & jelly (Thank me later !)  </li>
-                <li>My Favorite book is Things Fall Apart by Chinua Achebe</li>
+                <li> <button onclick="showFact1()">Languages</button> </li>
+                <p id="hello-container1"></p>
+                <li> <button onclick="showFact2()">Favorite Deli Order</button>  </li>
+                <p id="hello-container2"></p>
+                <li><button onclick="showFact3()">Favorite Book</button></li>
+                <p id="hello-container3"></p>
             </ul>
-            
+
        <h3>Life Update</h3>
        <p>In Summer 2021, I will be interning for three months as a hardware development engineer intern 
            for Amazon's Lab 126 in Silicon Valley, CA. </p>
@@ -56,12 +59,5 @@
             </ul>
         </div>
     </div>
-         
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <button onclick="showFacts()">Fast Facts</button>
-      <p id="hello-container"></p>
-      <div id="greeting-container"></div>
   </body>
 </html>
