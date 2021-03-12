@@ -15,40 +15,37 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  var quote ='I am trilingual';
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = quote;
-}
-
-async function showFact1(){
+async function ShowFact(contentnum){
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.json();
+    var facts = [textFromResponse.fact1, textFromResponse.fact2, textFromResponse.fact3];
+    var factclick = [0,0,0];
+    var container = "hello-container1";
+    var contents = facts[0];
+        
+    if (contentnum == 1){
+        contents = facts[0];
+        container = "hello-container1";
+        factclick[0]++;
+    }
+    else if (contentnum == 2){
+        contents = facts[1];
+        container = "hello-container2";
+        factclick[1]++;
+    }
+    else{
+        contents = facts[2];
+        container = "hello-container3";
+        factclick[2]++;
+    }
 
-    const helloContainer = document.getElementById('hello-container1');
+    const helloContainer = document.getElementById(container);
     helloContainer.innerHTML='';
-    helloContainer.appendChild(createListElement(textFromResponse.fact1));
-    //helloContainer.innerText = textFromResponse;
-}
-
-async function showFact2(){
-    const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.json();
-
-    const helloContainer = document.getElementById('hello-container2');
-    helloContainer.innerHTML='';
-    helloContainer.appendChild(createListElement(textFromResponse.fact2));
-}
-
-async function showFact3(){
-    const responseFromServer = await fetch('/hello');
-    const textFromResponse = await responseFromServer.json();
-
-    const helloContainer = document.getElementById('hello-container3');
-    helloContainer.innerHTML='';
-    helloContainer.appendChild(createListElement(textFromResponse.fact3));
+    helloContainer.appendChild(createListElement(contents));
+    if (!((factclick[0] > 1 && contentnum == 1) || (factclick[1] > 1 && contentnum == 2) 
+        || (factclick[2] > 1 && contentnum == 3)))
+        alert(contents);
 }
 
 function createListElement(text) {

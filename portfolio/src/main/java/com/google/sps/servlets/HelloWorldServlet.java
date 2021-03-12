@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
-    private String[] facts = {"I speak three languages","My go-to deli order is bagel with cream cheese & jelly","My Favorite book is Things Fall Apart by Chinua Achebe"};
+    private final static String[] facts = {"I speak three languages","My go-to deli order is bagel with cream cheese & jelly","My Favorite book is Things Fall Apart by Chinua Achebe"};
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
