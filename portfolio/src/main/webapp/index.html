@@ -30,7 +30,7 @@
            hardware and software realm. I'm really passionate about physical computing as it enables me to blur the 
            lines between the digital and physical world. Check out my projects to see how I've put passion to practice.
            <ul>
-				<li><a href="Proj.html" class="button">Projects</a></li>
+				<li><a href="Proj.html" class="projects" style="text-decoration:none" >Projects</a></li>
 			</ul>
         </p>
        <h3>Fast Facts</h3>
@@ -49,14 +49,24 @@
     
        
         <div id="connect">
-            <p>Get in touch with me !</p>
-            <ul>
-                <li class="icon solid fa-linkedin-square ">LinkedIn</li>
-            </ul>
+        <h3>Get in touch with me !</h3>
+            <form action="/form-handler" method="POST">
 
-            <ul>
-                <li class="icon solid fa-github ">Github</li>
-            </ul>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="Email">Email</label>
+                <input type="text" id="email" name="Contact" placeholder="Email">
+
+                <label for="Message">Message</label>
+                <textarea id="subject" name="text-input" placeholder="Your Message"></textarea>
+
+                <input type="submit" value="Submit"/>
+
+            </form>
         </div>
     </div>
   </body>
