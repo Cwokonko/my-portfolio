@@ -22,24 +22,10 @@ async function ShowFact(contentnum){
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.json();
     var facts = [textFromResponse.fact1, textFromResponse.fact2, textFromResponse.fact3];
-    var container = "hello-container1";
-    var contents = facts[0];
-        
-    if (contentnum == 1){
-        contents = facts[0];
-        container = "hello-container1";
-        factclick[0]++;
-    }
-    else if (contentnum == 2){
-        contents = facts[1];
-        container = "hello-container2";
-        factclick[1]++;
-    }
-    else{
-        contents = facts[2];
-        container = "hello-container3";
-        factclick[2]++;
-    }
+    
+    contents = facts[contentnum-1];
+    container = `hello-container${contentnum}`;
+    factclick[contentnum-1]++;
 
     const helloContainer = document.getElementById(container);
     helloContainer.innerHTML='';
