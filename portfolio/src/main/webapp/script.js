@@ -15,10 +15,27 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  var quote ='I am trilingual';
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = quote;
+var factclick = [0,0,0];
+
+async function ShowFact(contentnum){
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.json();
+    var facts = [textFromResponse.fact1, textFromResponse.fact2, textFromResponse.fact3];
+    
+    contents = facts[contentnum-1];
+    container = `hello-container${contentnum}`;
+    factclick[contentnum-1]++;
+
+    const helloContainer = document.getElementById(container);
+    helloContainer.innerHTML='';
+    helloContainer.appendChild(createListElement(contents));
+    if (!((factclick[0] > 1 && contentnum == 1) || (factclick[1] > 1 && contentnum == 2) || (factclick[2] > 1 && contentnum == 3)))
+        alert(contents);
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('p');
+  liElement.innerText = text;
+  return liElement;
 }

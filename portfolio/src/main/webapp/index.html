@@ -30,36 +30,44 @@
            hardware and software realm. I'm really passionate about physical computing as it enables me to blur the 
            lines between the digital and physical world. Check out my projects to see how I've put passion to practice.
            <ul>
-				<li><a href="Proj.html" class="button">Projects</a></li>
+				<li><a href="Proj.html" class="projects" style="text-decoration:none" >Projects</a></li>
 			</ul>
         </p>
        <h3>Fast Facts</h3>
             <ul>
-                <li>I speak three languages</li>
-                <li>My go-to deli order is bagel with cream cheese & jelly (Thank me later !)  </li>
-                <li>My Favorite book is Things Fall Apart by Chinua Achebe</li>
+                <li> <button class="fact1" onclick="ShowFact(1)">Languages</button> </li>
+                <p id="hello-container1"></p>
+                <li> <button class="fact2" onclick="ShowFact(2)">Favorite Deli Order</button>  </li>
+                <p id="hello-container2"></p>
+                <li><button class = "fact3" onclick="ShowFact(3)">Favorite Book</button></li>
+                <p id="hello-container3"></p>
             </ul>
-            
+
        <h3>Life Update</h3>
        <p>In Summer 2021, I will be interning for three months as a hardware development engineer intern 
            for Amazon's Lab 126 in Silicon Valley, CA. </p>
     
        
         <div id="connect">
-            <p>Get in touch with me !</p>
-            <ul>
-                <li class="icon solid fa-linkedin-square ">LinkedIn</li>
-            </ul>
+        <h3>Get in touch with me !</h3>
+            <form action="/form-handler" method="POST">
 
-            <ul>
-                <li class="icon solid fa-github ">Github</li>
-            </ul>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="Email">Email</label>
+                <input type="text" id="email" name="Contact" placeholder="Email">
+
+                <label for="Message">Message</label>
+                <textarea id="subject" name="text-input" placeholder="Your Message"></textarea>
+
+                <input type="submit" value="Submit"/>
+
+            </form>
         </div>
     </div>
-         
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
   </body>
 </html>
