@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Chidera Wokonko</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
     <script src="script.js"></script>
   </head>
   <body>
@@ -13,47 +16,65 @@
             <div class="topnav-right">
                 <a href="index.html">About</a>
                 <a href="Proj.html">Projects</a>
-                <a href="Chidera_Wokonko_Resume.pdf">Resume</a>
-                <a href="#">Contact</a>
+                <a href="Chidera_Wokonko_Resume.pdf" target="_blank">Resume</a>
+                <a href="#connect">Contact</a>
             </div>
         </div>
       <p>Welcome to my page!</p>
-      <img src = "images/Chidera-12.jpg" width=50% height=90%/>
-      <p> My name is Chidera Wokonko and I'm currently an undergraduate student at Cornell University majoring in Electrical and Computer Engineering (ECE) with a minor in robotics. 
-          Pursuing an engineering degree is no easy task, so to make that transition easier for subsequent classes I serve as a CUempower mentor for a group of freshman students 
-          who are part of Diversity Programs in Engineering at Cornell University. When I'm not doing problem sets or studying for an exam I'm working out, watching movies, implementing
-          my personal IOT devices or enjoying quality time with friends. I run a fitness vlog on Instagram called COFITNESS and I host weekly conversation hours at my university for 
-          people who want to learn the Nigerian native tongue--Igbo. 
-       </p>
-       <p>.......................................................................</p>
-       <p> My favorite thing about being an ECE major is the opportunity I have to navigate the boundary between the 
-           hardware and software realm. I'm really passionate about physical computing as it enables me to blur the 
-           lines between the digital and physical world. Check out my projects to see how I've put passion to practice.
-           <ul>
-				<li><a href="Proj.html" class="projects" style="text-decoration:none" >Projects</a></li>
-			</ul>
-        </p>
-       <h3>Fast Facts</h3>
-            <ul>
-                <li> <button class="fact1" onclick="ShowFact(1)">Languages</button> </li>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="images/Chidera-12.jpg" alt="Avatar" style="width:337px;height:502px">
+        </div>
+        <div class="flip-card-back">
+            <h1>Chidera Wokonko</h1> 
+            <p>Co-Founder, COFITNESS</p>
+            <p>Fitness Enthusiast X Engineer</p> 
+            <p></p>
+            <div class="icons">
+                <a href="https://github.com/Cwokonko/my-portfolio.git" style="text-decoration:none"><i class="fa fa-github" style="color: white;"></i></a> 
+                <a href="https://www.linkedin.com/in/chiderawokonko/" style="text-decoration:none"><i class="fa fa-linkedin" style="color: white;"></i></a> 
+                <a href="https://www.youtube.com/channel/UCHwIQxJTKMbUzzolSGlN-Vg/about" style="text-decoration:none"><i class="fa fa-youtube" style="color: white;"></i><a></a>
+                <a href="https://www.instagram.com/getfitwithcofit/" style="text-decoration:none"><i class="fa fa-instagram" style="color: white;"></i><a></a>
+            </div>
+            <h3>Fun Facts About Me</h3>
+            <p> <button class="fact1" onclick="ShowFact(1)">Languages</button> </p>
                 <p id="hello-container1"></p>
-                <li> <button class="fact2" onclick="ShowFact(2)">Favorite Deli Order</button>  </li>
+                <p> <button class="fact2" onclick="ShowFact(2)">Favorite Deli Order</button>  </p>
                 <p id="hello-container2"></p>
-                <li><button class = "fact3" onclick="ShowFact(3)">Favorite Book</button></li>
+                <p><button class = "fact3" onclick="ShowFact(3)">Favorite Book</button></p>
                 <p id="hello-container3"></p>
-            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="about">      
+      <p> My name is Chidera Wokonko and I'm currently an undergraduate student at Cornell University majoring in Electrical and Computer Engineering (ECE) with a minor in robotics. 
+          When I'm not doing problem sets or studying for an exam I'm working out, watching movies, working on my personal Internet of Things (IOT) <a href="Proj.html" class="projects" style="text-decoration:none"><strong>Projects</strong></a> or enjoying quality time with friends. 
+          Alternatively you can find me mentoring students who are part of the CUempower organization within Diversity Programs in Engineering at Cornell University. 
+          I also run a fitness vlog on Instagram and Youtube called <a href="https://www.instagram.com/getfitwithcofit/" target="_blank" style="text-decoration:none" ><strong>COFITNESS</strong></a> and I host weekly conversation hours at Cornell for people who want to learn the Nigerian native tongue--Igbo. 
+       </p>
+       <h2><em><strong>Engineering In Practice</strong></em></h2>
+        <p><strong>Summer 2021:</strong>  I will be working as a hardware development engineer intern 
+            for <a href="https://amazon.jobs/en/teams/lab126/" target="_blank" style="text-decoration:none"><strong>Amazon's</strong></a> Lab 126. 
+        </p>           
+            <p> <strong>Spring 2021:</strong>  I was a participant in <a href="https://google.com" target="_blank" style="text-decoration:none"><strong>Google's</strong></a> software product sprint program.
+            </p>
+            <p>
+                <strong>Summer 2020:</strong>  I worked at <a href="https://bluestampengineering.com" target="_blank" style="text-decoration:none"><strong>Bluestamp Engineering</strong></a> as an electrical and sensors instructor. 
+            </p>
+    </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/chiderawokonko/" style="text-decoration:none"><i class="fa fa-linkedin-square" style="color: #4e1c1c;"></i></a>
+                <br>
+                <a href="https://github.com/Cwokonko/my-portfolio.git" style="text-decoration:none"><i class="fa fa-github" style="color: #4e1c1c;"></i></a>  
+             </div>
 
-       <h3>Life Update</h3>
-       <p>In Summer 2021, I will be interning for three months as a hardware development engineer intern 
-           for Amazon's Lab 126 in Silicon Valley, CA. </p>
-    
-       
         <div id="connect">
-        <h3>Get in touch with me !</h3>
+        <h2><em><strong>Get in touch with me !</strong></em></h2>
             <form action="/form-handler" method="POST">
 
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
 
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">

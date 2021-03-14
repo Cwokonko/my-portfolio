@@ -15,7 +15,7 @@
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* Change the color of links on hover */
@@ -49,12 +49,10 @@
 body{
     background-color: #fff;
     color:#4e1c1c;
-    font-family: futura;
-    font-size: small;
+    font-family: 'Alegreya', serif;
+    font-size: 16px;
 }
-div.content div.Projects{
-    text-align: justify;
-}
+
 h1{
     text-transform: uppercase;
     font-size: 30px;
@@ -64,13 +62,6 @@ div.container {
   position: relative; 
   max-width: 800px; /* Maximum width */
   margin: 0 auto; /* Center it */
-}
-
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    float:right
 }
 
 img{
@@ -121,19 +112,149 @@ input[type=submit]:hover {
 }
 
 button{
-  background-color: #4e1c1c;
-  color: white;
+  background-color: #ffffff;
+  color: #4e1c1c;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  list-style-type: none;
+  margin: 0;
 }
 
-.projects{
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green; 
+}
+
+.Modals button{
   background-color: #4e1c1c;
   color: white;
-  padding: 8px 20px;
-  border: none;
+  padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 1421px;
+  font-size: 18px;
+  font-family: 'Alegreya', serif;
 }
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 337px;
+  height: 502px;
+  perspective: 1000px; 
+  float: right;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front img {
+  background-color: #bbb;
+  color: black;
+  border-radius: 70%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #4e1c1d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.icons{
+  text-decoration: none;
+  font-size: 30px;
+  color:inherit;
+}
+div#linkedin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+body div.about{
+    width: 700px;
+    margin:auto;
+    padding: 0;
+}
+
+body div.flip-card{
+    font-size: 15px;
+}
+
+.about a{
+    color:black;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 47%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
