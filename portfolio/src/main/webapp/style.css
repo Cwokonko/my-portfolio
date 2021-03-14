@@ -51,6 +51,7 @@ body{
     color:#4e1c1c;
     font-family: 'Alegreya', serif;
     font-size: 16px;
+    width: 100%
 }
 
 h1{
@@ -205,6 +206,7 @@ div#linkedin{
   align-items: center;
   font-size: 30px;
 }
+
 body div.about{
     width: 700px;
     margin:auto;
@@ -244,7 +246,7 @@ body div.flip-card{
 }
 
 /* The Close Button */
-.close {
+.close .close1 .close2{
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -258,3 +260,24 @@ body div.flip-card{
   cursor: pointer;
 }
 
+.hidden{
+    color:white;
+}
+
+p a.glow {
+  padding:12px 20px;
+  font-size: 20px;
+  color: #4e1c1c;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4e1c1c, 0 0 40px #4e1c1c, 0 0 50px #4e1c1c, 0 0 60px #4e1c1c, 0 0 70px #4e1c1c;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #c2a318e0, 0 0 40px #c2a318e0, 0 0 50px #c2a318e0, 0 0 60px #c2a318e0, 0 0 70px #c2a318e0, 0 0 80px #c2a318e0;
+  }
+}
